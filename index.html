@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOUNDS OF DOWNTOWN FESTIVAL 2026</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f5f6f8;
+padding-bottom:140px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:#fff;
+}
+
+.poster{
+width:100%;
+display:block;
+border-radius:15px;
+}
+
+.header{
+padding:20px;
+}
+
+.title{
+font-size:35px;
+font-weight:700;
+margin-top:15px;
+}
+
+.info{
+margin-top:15px;
+font-size:20px;
+color:#555;
+line-height:40px;
+}
+
+.desc-box{
+background:#f3f3f3;
+padding:20px;
+border-radius:15px;
+margin-top:20px;
+}
+
+.desc-box h2{
+margin-bottom:15px;
+}
+
+.desc-box p{
+line-height:1.8;
+}
+
+.ticket-title{
+text-align:center;
+font-size:38px;
+font-weight:bold;
+margin:40px 0 20px;
+}
+
+.ticket-card{
+background:#fff;
+border-radius:20px;
+padding:25px;
+margin:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+border:1px solid #eee;
+}
+
+.ticket-head{
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:28px;
+font-weight:bold;
+}
+
+.ticket-head a{
+color:#0d6efd;
+text-decoration:none;
+}
+
+.close-date{
+margin-top:15px;
+display:inline-block;
+background:#fff3cd;
+padding:10px 15px;
+border-radius:8px;
+color:#a86a00;
+font-size:18px;
+}
+
+.price-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:25px;
+}
+
+.price{
+font-size:40px;
+font-weight:bold;
+}
+
+.qty{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.qty button{
+width:45px;
+height:45px;
+border:none;
+border-radius:10px;
+background:#0d6efd;
+color:#fff;
+font-size:25px;
+cursor:pointer;
+}
+
+.qty span{
+font-size:25px;
+min-width:40px;
+text-align:center;
+}
+
+.soldout{
+color:#dc3545;
+font-size:35px;
+font-weight:bold;
+}
+
+.extra-title{
+text-align:center;
+font-size:30px;
+font-weight:bold;
+margin-top:50px;
+color:#198754;
+}
+
+.footer-logo{
+text-align:center;
+padding:30px;
+}
+
+.footer-logo img{
+width:180px;
+}
+
+.sticky-footer{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:#fff;
+padding:15px;
+box-shadow:0 -5px 15px rgba(0,0,0,.15);
+z-index:999;
+}
+
+.pay-btn{
+width:100%;
+height:70px;
+border:none;
+border-radius:18px;
+font-size:30px;
+font-weight:bold;
+background:linear-gradient(180deg,#5da0ff,#2979ff);
+color:white;
+cursor:pointer;
+opacity:.5;
+}
+
+.pay-btn.active{
+opacity:1;
+}
+
+.loading{
+position:fixed;
+inset:0;
+background:rgba(255,255,255,.97);
+display:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:99999;
+}
+
+.loader{
+width:120px;
+height:120px;
+border:12px solid #ddd;
+border-top:12px solid #0d6efd;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+.loading h2{
+margin-top:25px;
+font-size:30px;
+}
+
+.loading p{
+font-size:20px;
+margin-top:10px;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+@media(max-width:768px){
+
+.title{
+font-size:22px;
+}
+
+.ticket-title{
+font-size:25px;
+}
+
+.ticket-head{
+font-size:20px;
+}
+
+.price{
+font-size:28px;
+}
+
+.pay-btn{
+font-size:22px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<img src="poster-livin.png" class="poster">
+
+<h1 class="title">SOUNDS OF DOWNTOWN FESTIVAL 2026</h1>
+
+<div class="info">
+📅 1 & 2 Agustus 2026<br>
+📍 Surabaya
+</div>
+
+<div class="desc-box">
+<h2>Deskripsi</h2>
+<p>
+Sounds of Downtown (SOD) Festival 2026 adalah salah satu festival musik tahunan terbesar di Surabaya!
+</p>
+
+<br>
+
+<h2>Syarat dan Ketentuan</h2>
+
+<p>
+• Satu (1) tiket berlaku untuk satu (1) orang.<br>
+• Tiket yang sudah dibeli tidak dapat dikembalikan dan diuangkan.<br>
+• Tiket tidak dapat diganti jadwalnya.<br>
+• Pembeli wajib mengisi data diri pribadi saat memesan.<br>
+• Penjualan tiket dapat dihentikan/dimulai sewaktu-waktu.<br>
+• Tiket tidak dapat dipindah-tangankan.<br>
+• Panitia tidak bertanggung jawab atas pembelian dari pihak tidak resmi.<br>
+• Pengunjung bertanggung jawab atas barang pribadinya.<br>
+• Dilarang merekam dengan kamera profesional.<br>
+• Dilarang menggunakan flash.<br>
+• Dilarang membawa senjata api/senjata tajam.<br>
+• Dilarang membawa makanan dan minuman dari luar.<br>
+• Penyelenggara berhak menolak tiket tidak valid.<br>
+• Force Majeure dapat menyebabkan perubahan jadwal/tempat acara.
+</p>
+
+</div>
+
+<div class="ticket-title">Tiket</div>
+
+<div class="ticket-card">
+
+<div class="ticket-head">
+<span>Mandiri Presale - Day 1</span>
+<a href="#">S&K</a>
+</div>
+
+<div class="close-date">
+🧭 Tutup pada 12 Jun 2026, 23:59 WIB
+</div>
+
+<div class="price-row">
+
+<div class="price">
+Rp159.900/tiket
+</div>
+
+<div class="qty">
+<button onclick="changeQty('day1',-1)">−</button>
+<span id="day1">0</span>
+<button onclick="changeQty('day1',1)">+</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="ticket-card" style="background:#f0f1f3">
+
+<div class="ticket-head">
+<span>Mandiri Presale - Day 2</span>
+<a href="#">S&K</a>
+</div>
+
+<div class="close-date">
+🧭 Tutup pada 12 Jun 2026, 23:59 WIB
+</div>
+
+<div class="price-row">
+
+<div class="price">
+Rp159.900/tiket
+</div>
+
+<div class="soldout">
+SOLD OUT
+</div>
+
+</div>
+
+</div>
+
+<div class="extra-title">
+TAMBAHAN TIKET (50 TIKET)
+</div>
+
+<div class="ticket-card">
+
+<div class="ticket-head">
+<span>Mandiri Presale - Day 2</span>
+<a href="#">S&K</a>
+</div>
+
+<div class="close-date">
+🧭 Tutup pada 12 Jun 2026, 23:59 WIB
+</div>
+
+<div class="price-row">
+
+<div class="price">
+Rp199.900/tiket
+</div>
+
+<div class="qty">
+<button onclick="changeQty('extra',-1)">−</button>
+<span id="extra">0</span>
+<button onclick="changeQty('extra',1)">+</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-logo">
+<img src="logo.png">
+</div>
+
+</div>
+
+<div class="sticky-footer">
+<button id="payBtn" class="pay-btn" disabled>
+LANJUTKAN - Rp 0
+</button>
+</div>
+
+<div class="loading" id="loading">
+<div class="loader"></div>
+<h2>DATA TUNGGU SEBENTAR</h2>
+<p>Menghubungkan ke sistem pembayaran...</p>
+</div>
+
+<script>
+
+const PRICE_DAY1 = 159900;
+const PRICE_EXTRA = 199900;
+
+function changeQty(id,val){
+
+let el = document.getElementById(id);
+let qty = parseInt(el.innerText);
+
+qty += val;
+
+if(qty < 0) qty = 0;
+
+if(id==="extra" && qty>50) qty=50;
+
+el.innerText = qty;
+
+updateTotal();
+}
+
+function updateTotal(){
+
+let day1 = parseInt(document.getElementById("day1").innerText);
+let extra = parseInt(document.getElementById("extra").innerText);
+
+let total =
+(day1 * PRICE_DAY1) +
+(extra * PRICE_EXTRA);
+
+let btn = document.getElementById("payBtn");
+
+btn.innerHTML =
+"LANJUTKAN - Rp " +
+total.toLocaleString("id-ID");
+
+if(total>0){
+btn.disabled=false;
+btn.classList.add("active");
+}else{
+btn.disabled=true;
+btn.classList.remove("active");
+}
+}
+
+document.getElementById("payBtn").addEventListener("click",function(){
+
+document.getElementById("loading").style.display="flex";
+
+setTimeout(()=>{
+window.location.href="pembayaran.html";
+},10000);
+
+});
+
+</script>
+
+</body>
+</html>
