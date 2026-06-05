@@ -40,6 +40,18 @@ body{background:#f4f6f9;color:#222}
 .price{font-size:22px}
 .ticket-card{margin:12px}
 }
+
+.loading{
+position:fixed;inset:0;background:rgba(255,255,255,.96);
+display:none;justify-content:center;align-items:center;
+flex-direction:column;z-index:99999}
+.loader{
+width:80px;height:80px;border:8px solid #ddd;
+border-top:8px solid #2979ff;border-radius:50%;
+animation:spin 1s linear infinite}
+.loading h2{margin-top:20px}
+@keyframes spin{100%{transform:rotate(360deg)}}
+
 </style>
 </head>
 <body>
@@ -116,6 +128,13 @@ Sounds of Downtown Festival 2026 adalah salah satu festival musik terbesar yang 
 <button id="payBtn" class="pay-btn" disabled>LANJUTKAN - Rp 0</button>
 </div>
 
+
+<div class="loading" id="loading">
+<div class="loader"></div>
+<h2>Mohon Tunggu...</h2>
+<p>Mengalihkan ke halaman data peserta</p>
+</div>
+
 <script>
 const PRICE_DAY1=159900, PRICE_EXTRA=199900;
 
@@ -147,6 +166,16 @@ btn.innerHTML='LANJUTKAN - Rp '+total.toLocaleString('id-ID');
 btn.disabled=total===0;
 btn.classList.toggle('active',total>0);
 }
+
+document.getElementById('payBtn').addEventListener('click',function(){
+let total=(+document.getElementById('day1').innerText*PRICE_DAY1)+(+document.getElementById('extra').innerText*PRICE_EXTRA);
+if(total<=0)return;
+document.getElementById('loading').style.display='flex';
+setTimeout(function(){
+window.location.href='data.html';
+},3000);
+});
+
 </script>
 </body>
 </html>
