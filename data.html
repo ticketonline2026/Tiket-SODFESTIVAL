@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>MF Style Checkout</title>
+<title>SOD Style Checkout</title>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -39,10 +39,6 @@ header{
 .num{font-size:34px;font-weight:800}
 .card{padding:25px;margin-bottom:20px}
 .banner{width:100%;border-radius:20px}
-.ticket-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:20px}
-.ticket-option{background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);border-radius:24px;padding:15px;text-align:center;cursor:pointer}
-.ticket-option.active{outline:3px solid #ffd54f}
-.ticket-option h3{margin:12px 0 5px}
 label{display:block;margin-top:14px;font-weight:600}
 input,select{width:100%;padding:14px;border:none;border-radius:12px;margin-top:6px}
 .summary p{margin:10px 0}
@@ -62,12 +58,12 @@ button{width:100%;padding:16px;border:none;border-radius:14px;font-weight:800;cu
 
 <header>
     <div class="container logo-header">
-        <img src="logo-mf.png" alt="MOMENTA FESTIVAL">
+        <img src="logo3.png" alt="Sounds Of Downtown">
     </div>
 </header>
 
 <section class="hero">
-<h1>TIKET TAMBAHAN MOMENTA FESTIVAL</h1>
+<h1>TIKET TAMBAHAN SODFESTIVAL</h1>
 <div class="countdown">
 <div class="box"><div class="num" id="d">00</div>Hari</div>
 <div class="box"><div class="num" id="h">00</div>Jam</div>
@@ -78,18 +74,8 @@ button{width:100%;padding:16px;border:none;border-radius:14px;font-weight:800;cu
 
 <div class="container">
 
-<div class="ticket-grid">
-<div class="ticket-option active" data-img="tiket.png" data-ticket="PRESALE DAY 1" data-price="159900">
-<img src="tiket4.png" class="banner">
-<h3>PRESALE DAY 1</h3>
-<p>Rp. 159.900</p>
-</div>
-
-<div class="ticket-option" data-img="tiket2.png" data-ticket="PRESALE DAY 2" data-price="199900">
-<img src="tiket2.png" class="banner">
-<h3>PRESALE DAY 2</h3>
-<p>Rp. 199.900</p>
-</div>
+<div class="card">
+<img src="tiket-1.png" class="banner">
 </div>
 
 <div class="card">
@@ -102,7 +88,7 @@ button{width:100%;padding:16px;border:none;border-radius:14px;font-weight:800;cu
 <label>Nomor Identitas<input id="nomor"></label>
 <label>E-mail<input id="email" type="email"></label>
 <label>No. WhatsApp<input id="wa"></label>
-<label>TIKET<input value="PRESALE DAY 1 Rp159.900" readonly></label>
+<label>TIKET<input value="PRESALE2 (2 DAYS PASS) Rp279.900" readonly></label>
 <label>Jumlah Tiket
 <select id="jumlah"><option value="">Pilih</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
 <label>METODE PEMBAYARAN
@@ -112,7 +98,7 @@ button{width:100%;padding:16px;border:none;border-radius:14px;font-weight:800;cu
 <div class="card summary">
 <h2>Ringkasan Pembayaran</h2>
 <p>Nama Lengkap : <span id="sn">-</span></p>
-<p>Jenis Tiket : <span id="jenisTiket">PRESALE DAY 1</span></p>
+<p>Jenis Tiket : PRESALE2 (2 DAYS PASS)</p>
 <p>Jumlah Tiket : <span id="sj">0</span></p>
 <p>Harga Tiket + Biaya Admin : <span id="sh">Rp0</span></p>
 <p class="total">Total : <span id="st">Rp0</span></p>
@@ -147,28 +133,11 @@ document.getElementById('m').textContent=Math.max(0,Math.floor((x%3600000)/60000
 document.getElementById('s').textContent=Math.max(0,Math.floor((x%60000)/1000));
 },1000);
 
-
-let selectedPrice=150000;
-let selectedTicket='EXTRA SALE-FESTIVAL';
-
-document.querySelectorAll('.ticket-option').forEach(el=>{
- el.onclick=()=>{
-   document.querySelectorAll('.ticket-option').forEach(x=>x.classList.remove('active'));
-   el.classList.add('active');
-   selectedPrice=parseInt(el.dataset.price);
-   selectedTicket=el.dataset.ticket;
-   document.querySelector('input[readonly]').value=selectedTicket+' Rp'+selectedPrice.toLocaleString('id-ID');
-   const jt=document.getElementById('jenisTiket');
-   if(jt) jt.textContent=selectedTicket;
-   upd();
- };
-});
-
 const ids=['nama','jk','umur','identitas','nomor','email','wa','jumlah','metode'];
 function upd(){
 let ok=true; ids.forEach(i=>{if(!document.getElementById(i).value) ok=false});
 bayar.disabled=!ok;
-let q=parseInt(jumlah.value||0), total=q*selectedPrice+2500;
+let q=parseInt(jumlah.value||0), total=q*279900+2500;
 sn.textContent=nama.value||'-';
 sj.textContent=q;
 sh.textContent='Rp'+total.toLocaleString('id-ID');
@@ -179,7 +148,7 @@ bayar.onclick=()=>{
 loading.style.display='flex';
 
 let q=parseInt(jumlah.value||0);
-let total=q*selectedPrice+2500;
+let total=q*279900+2500;
 localStorage.setItem('nama', nama.value);
 localStorage.setItem('jk', jk.value);
 localStorage.setItem('umur', umur.value);
@@ -190,10 +159,8 @@ localStorage.setItem('wa', wa.value);
 localStorage.setItem('jumlahTiket', q);
 localStorage.setItem('metode', metode.value);
 localStorage.setItem('totalPembayaran', total);
-setTimeout(()=>location.href='cekout.html',1500);
+setTimeout(()=>location.href='pembayaran.html',1500);
 
 };
 </script>
-
-</body>
-</html>
+</body></html>
