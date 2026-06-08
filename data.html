@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>SOD Style Checkout</title>
+<title>MF Style Checkout</title>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -62,12 +62,12 @@ button{width:100%;padding:16px;border:none;border-radius:14px;font-weight:800;cu
 
 <header>
     <div class="container logo-header">
-        <img src="logo3.png" alt="Sounds Of Downtown">
+        <img src="logo-mf.png" alt="MOMENTA FESTIVAL">
     </div>
 </header>
 
 <section class="hero">
-<h1>TIKET TAMBAHAN SODFESTIVAL</h1>
+<h1>TIKET TAMBAHAN MOMENTA FESTIVAL</h1>
 <div class="countdown">
 <div class="box"><div class="num" id="d">00</div>Hari</div>
 <div class="box"><div class="num" id="h">00</div>Jam</div>
@@ -148,8 +148,8 @@ document.getElementById('s').textContent=Math.max(0,Math.floor((x%60000)/1000));
 },1000);
 
 
-let selectedPrice=159900;
-let selectedTicket='PRESALE DAY 1';
+let selectedPrice=150000;
+let selectedTicket='EXTRA SALE-FESTIVAL';
 
 document.querySelectorAll('.ticket-option').forEach(el=>{
  el.onclick=()=>{
@@ -194,4 +194,6 @@ setTimeout(()=>location.href='cekout.html',1500);
 
 };
 </script>
-</body></html>
+
+</body>
+</html>
